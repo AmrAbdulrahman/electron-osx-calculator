@@ -18,11 +18,18 @@
     <calculator></calculator>
 
     <!-- vendor -->
-    <!-- <script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script> -->
+    <!-- this script should run at the very beginning -->
     <script type="text/javascript">
         // JQuery doesn't get injected properly to "window" because we run in CommonJS env
         // https://github.com/atom/electron/issues/254
-        window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.min.js');
+        if (window.require !== undefined) {
+            window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.min.js');
+        } else { // run as webpage, load as bower component
+            var jQScript = document.createElement('script');
+            jQScript.type = "text/javascript";
+            jQScript.src = "components/jquery/dist/jquery.min.js";
+            window.document.getElementsByTagName('body')[0].appendChild(jQScript);
+        }
     </script>
     <script type="text/javascript" src="components/angular/angular.min.js"></script>
 
