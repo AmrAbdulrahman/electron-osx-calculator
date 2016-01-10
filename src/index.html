@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="calcApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>OSX Calculator</title>
+    <link rel="shortcut icon" href="img/calc-icon.png">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+    
+    <!-- vendor -->
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- app -->
+    <link rel="stylesheet" href="styles/app.css" />
+    <link rel="stylesheet" href="styles/calculator.css" />
+  </head>
+  <body ng-controller="CalcCtrl">
+    <calculator></calculator>
+
+    <!-- vendor -->
+    <!-- <script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script> -->
+    <script type="text/javascript">
+        // JQuery doesn't get injected properly to "window" because we run in CommonJS env
+        // https://github.com/atom/electron/issues/254
+        window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.min.js');
+    </script>
+    <script type="text/javascript" src="components/angular/angular.min.js"></script>
+
+    <!-- app -->
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/services/calculator-srvc.js"></script>
+    <script type="text/javascript" src="app/controllers/calculator-ctrl.js"></script>
+    <script type="text/javascript" src="app/directives/calculator/calculator.js"></script>
+  </body>
+</html>

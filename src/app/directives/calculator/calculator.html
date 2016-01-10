@@ -1,0 +1,42 @@
+<div class="container-fluid calculator-wrapper">
+    <!-- res -->
+    <div class="row">
+        <div class="col-xs-12 result-wrapper">
+            <div class="result">
+                <span ng-if="operand1 != null">{{operand1 | number}}{{' ' + operation + ' '}}</span>
+                <span ng-if="!isNaN(result)">{{result | number}}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- buttons -->
+    <div class="row">
+        <div
+            ng-class="{
+                'col-xs-3': !buttonDef[btnId].span,
+                'col-xs-6': buttonDef[btnId].span === 2,
+            }"
+            class="button-wrapper"
+            ng-repeat="btnId in buttons track by $index"
+            ng-click="buttonDef[btnId].action()"
+            ng-if="buttonDef[btnId].drawable !== false">
+            <div 
+                class="button noselect lightgray"
+                ng-class="{
+                    orange: ($index+1) % 4 === 0,
+                    darkgray: ($index+1) % 4 !== 0 && buttonDef[btnId].isOperation
+                }">
+                {{buttonDef[btnId].text}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="log">
+                {{logMsg}}
+            </div>
+        </div>
+    </div>
+
+</div>

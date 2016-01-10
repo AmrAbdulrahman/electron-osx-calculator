@@ -1,0 +1,20 @@
+{
+  "name": "electron-calc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron index.js",
+    "package": "./node_modules/.bin/electron-packager . OSX-Calc  --platform=all --arch=x64 --version=0.36.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-prebuilt": "^0.36.2"
+  },
+  "devDependencies": {
+    "bower": "^1.7.2",
+    "electron-packager": "^5.2.0",
+    "express": "^4.13.3"
+  }
+}

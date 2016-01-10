@@ -1,0 +1,38 @@
+.button-wrapper, .result-wrapper {
+    padding: 0;
+}
+
+.result {
+    height: 70px;
+    font-size: 40px;
+    padding-top: 6px;
+    padding-right: 15px;
+    text-align: right;
+    background-color: #A3815D;
+    color: #E4DDCD;
+}
+
+.button {
+    height: 50px;
+    text-align: center;
+    border-right: 1px solid #B6B6B6;
+    border-bottom: 1px solid #B6B6B6;
+    padding-top: 10px;
+    font-size: 21px;
+}
+
+.button:hover {
+    cursor: default;
+}
+
+.lightgray {
+    background-color: #E0E0E0;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.darkgray {
+    background-color: #D6D6D6;
+}
