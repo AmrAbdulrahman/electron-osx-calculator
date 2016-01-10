@@ -1,3 +1,6 @@
 node_modules/
 src/node_modules/
 src/components/
+OSX-Calc-darwin-x64/
+OSX-Calc-linux-x64/
+OSX-Calc-win32-x64/
