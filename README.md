@@ -27,9 +27,16 @@
 - npm start # launches the calculator
 
 ## Develope/Debug
-- vim index.js
-- set DevelopmentMode = true
-- npm start
+- Test as Electron app, with DeveloperTools opened.
+  - vim index.js
+  - set DevelopmentMode = true
+  - npm start
+- Test the app as webpage on a browser
+  - from the repo root  
+  - node express.js
+  - webapp should get up and running on port: 9000
+  - change the port from express.js
+
 
 ## Package
 - npm run package # see full script inside ./package.json -> scripts section
