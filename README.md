@@ -3,6 +3,8 @@
 > This is my first Electron app, i just wanted to get my hands on with a very simple app
 > I created a simple OSX-like calculator
 
+![OSX Calculator](http://s21.postimg.org/jrydvffo7/OSX_CALC.png)
+
 ## Stack
 - Electron
 - Angular
