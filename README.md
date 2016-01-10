@@ -1,6 +1,6 @@
 # electron-osx-calculator
 
-> This is my first Electron app, i just wanted to get my hands on with a very simple app
+> This is my first Electron app, i just wanted to get my hands on with a very simple app.
 > I created a simple OSX-like calculator
 
 <p align="center">
